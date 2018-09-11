@@ -1,0 +1,5 @@
+- unless @articles.blank?
+  h3.text-uppercase.m-t-3
+    a.btn.btn-block.btn-sm.btn-outline-primary[href=articles_path] = t 'article.index.label'
+  .articles.row.aligns
+    = render partial: 'statics/article', collection: @articles, cached: true
